@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>磅單追蹤平台 - 統計摘要</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="topnav">
+  <div class="brand">🐟 磅單追蹤平台</div>
+  <a href="/index.html">紀錄列表</a>
+  <a href="/new.html">新增紀錄</a>
+  <a href="/stats.html" class="active">統計摘要</a>
+</header>
+
+<main>
+  <div class="card">
+    <h2>統計摘要</h2>
+    <div class="stat-tiles" id="summary-tiles"></div>
+  </div>
+
+  <div class="card">
+    <h3>依漁會/地點</h3>
+    <div class="table-scroll">
+      <table id="location-table">
+        <thead><tr><th>卸魚地點</th><th>卸魚筆數</th><th>淨重合計(KG)</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>依付款排程日期統計</h3>
+    <p class="hint">加總「切結轉帳淨額」，已標記「不計入統計」的列不會重複計入。</p>
+    <div class="table-scroll">
+      <table id="date-table">
+        <thead><tr><th>日期</th><th>金額</th><th>明細</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<script src="/js/api.js"></script>
+<script src="/js/stats.js"></script>
+</body>
+</html>
